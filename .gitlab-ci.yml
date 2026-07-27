@@ -1,0 +1,13 @@
+stages:
+  - test
+
+test-html:
+  stage: test
+  image: alpine:latest
+
+  script:
+    - echo "Starting CI Pipeline..."
+    - test -f index.html
+    - test -f style.css
+    - test -f script.js
+    - echo "All required files found."
